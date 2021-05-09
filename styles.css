@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    /* color:#343a40; */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    z-index: 997;
+
+}
+
+.nav-list {
+    display: none;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo__dot {
+    color: #ffc451;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo>a {
+    color: white;
+}
+
+.btn__getstarted {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.menu-toggle:hover {
+    cursor: pointer;
+}
+
+.menu-toggle>.gg-close {
+    display: none;
+}
+
+.menu-toggle>.gg-menu {
+    color: white;
+}
+
+.btn__getStarted {
+    padding: 1rem 2rem;
+    border: 2px solid #ffc451;
+    border-radius: 5px;
+    width: 12rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-right: 2rem;
+    color: white;
+}
+
+.btn__getStarted:hover {
+    background-color: #ffc451;
+    color: black;
+    transition: background-color 0.3s ease-in;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 20rem 1rem 6rem 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.headline {
+    font-size: 4rem;
+}
+
+i.gg-toolbox {
+    color: #ffc451;
+    margin-bottom: 2rem;
+    font-size: 19rem;
+}
+
+.grid__items {
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.sub-headline {
+    font-size: 1.4rem;
+    color: rgb(243, 243, 243);
+    margin-top: 1rem;
+    font-weight: lighter;
+
+}
+
+.item {
+    border: 1px solid grey;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    width: 250px;
+    margin: 1rem;
+}
+
+.item:hover {
+    border-color: #ffc451;
+}
+
+
+/* ABOUT */
+.about{
+    padding:4rem;
+    display: flex;
+    justify-content: center;
+}
+.text__container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.text__container > img{
+    width:50%;
+    margin-left: 2rem;
+    object-fit: contain;
+}
+.text__container .inner__text{
+    color: #212529;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+.text__container .inner__text h1{
+    font-size:2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.text__container .inner__text h3{
+    font-style: italic!important;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.text__container .inner__text > ul{
+    list-style-type: none;
+}
+.text__container .inner__text > ul >li> .gg-check{
+    color:#ffc451;
+}
+.text__container .inner__text > ul >li{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.text__container .inner__text > ul >li > p{
+    margin-left:0.5rem;
+}
+.text__container .inner__text > .bottom___text{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+/* END ABOUT */
+
+/* media queries */
+@media only screen and (max-width:991px){
+    .text__container{
+        flex-direction: column;
+    }
+    .text__container > img{
+        width:100%;
+        margin:2rem auto;
+    }
+    .text__container .inner__text > ul >li{
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+    .about{
+        padding:6rem;
+    }
+}
+@media only screen and (max-width:767px){
+    .item{
+        width:100%;
+    }
+    .about{
+        padding:1rem;
+    }
+}
+@media only screen and (min-width:1000px){
+    .hero{
+        height:100vh;
+    }
+    .nav{
+        margin:0 3rem;
+    }
+}
+
+/* ends media queries */
